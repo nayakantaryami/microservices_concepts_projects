@@ -25,7 +25,7 @@ app.use(helmet()); // Use helmet for security
 app.use(cors());
 app.use((req, res, next) => {
   logger.info(`Request Method: ${req.method}, Request URL: ${req.url}`);
-  logger.info(`Request Body,${req.body}`);
+  logger.info(`Request Body: ${JSON.stringify(req.body)}`);
   next();
 });
 
@@ -56,7 +56,7 @@ app.use((req, res, next) => {
 //ip based rate limiting for sensitive end points
 const sensitiveEndPointsLimiter = rateLimit({
   windowMs: 20 * 60 * 1000, // 20 minutes
-  max: 50, // Limit each IP to 5 requests per windowMs
+  max: 50, // Limit each IP to 50 requests per windowMs
   standardHeaders: true, // whether want to include rate limit info in response headers,also client can see no of req left
   legacyHeaders: false,
   handler: (req, res) => {
