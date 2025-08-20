@@ -7,3 +7,7 @@
 {"level":"info","message":"API GateWay is running on port 3000","service":"api-gateway","timestamp":"2025-08-20T10:03:06.477Z"}
 {"level":"info","message":"Identity Service is running on port http://localhost:3001","service":"api-gateway","timestamp":"2025-08-20T10:03:06.480Z"}
 {"level":"info","message":"Redis Url redis://localhost:6379","service":"api-gateway","timestamp":"2025-08-20T10:03:06.481Z"}
+{"level":"info","message":"Request Method: POST, Request URL: /v1/auth/register","service":"api-gateway","timestamp":"2025-08-20T10:06:28.924Z"}
+{"level":"info","message":"Request Body: {\"username\":\"john\",\"email\":\"john@gmail.com\",\"password\":\"john@password\"}","service":"api-gateway","timestamp":"2025-08-20T10:06:28.926Z"}
+{"level":"info","message":"Request Method: POST, Request URL: /v1/auth/register","service":"api-gateway","timestamp":"2025-08-20T10:08:09.984Z"}
+{"level":"info","message":"Request Body: {\"username\":\"john\",\"email\":\"john@gmail.com\",\"password\":\"john@password\"}","service":"api-gateway","timestamp":"2025-08-20T10:08:09.985Z"}
