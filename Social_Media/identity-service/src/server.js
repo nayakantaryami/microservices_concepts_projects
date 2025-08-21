@@ -25,7 +25,8 @@ app.use(helmet()); // Use helmet for security
 app.use(cors());
 app.use((req, res, next) => {
   logger.info(`Request Method: ${req.method}, Request URL: ${req.url}`);
-  logger.info(`Request Body: ${JSON.stringify(req.body)}`);
+  logger.info(`Request Body: ${req.body}`);
+  //using json.stringify(req.body) will expose all the user credentials
   next();
 });
 

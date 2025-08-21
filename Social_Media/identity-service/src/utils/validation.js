@@ -1,4 +1,5 @@
 const Joi = require("joi"); // Import Joi for validation
+const { schema } = require("../models/User");
 
 const validateRegistration = (data) => {
   const Schema = Joi.object({
@@ -9,6 +10,14 @@ const validateRegistration = (data) => {
   return Schema.validate(data);
 };
 
+const validateLogin=(data)=>{
+  const Schema=Joi.object({
+    email:Joi.string().email().required(),
+    password:Joi.string().min(6).required(),
+  });
+  return Schema.validate(data);
+}
 module.exports = {
-  validateRegistration
+  validateRegistration,
+  validateLogin
 };
