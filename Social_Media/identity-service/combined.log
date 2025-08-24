@@ -520,3 +520,22 @@
 {"level":"info","message":"Request Method: POST, Request URL: /api/auth/login","service":"identity-service","timestamp":"2025-08-23T23:56:37.313Z"}
 {"level":"info","message":"Request Body: [object Object]","service":"identity-service","timestamp":"2025-08-23T23:56:37.325Z"}
 {"level":"info","message":"Login user Api end point hit","service":"identity-service","timestamp":"2025-08-23T23:56:37.335Z"}
+{"level":"info","message":"identity-server is running on port 3001","service":"identity-service","timestamp":"2025-08-24T01:22:08.680Z"}
+{"level":"info","message":"MongoDB connected","service":"identity-service","timestamp":"2025-08-24T01:22:09.812Z"}
+{"level":"info","message":"Request Method: POST, Request URL: /api/auth/login","service":"identity-service","timestamp":"2025-08-24T01:22:41.741Z"}
+{"level":"info","message":"Request Body: [object Object]","service":"identity-service","timestamp":"2025-08-24T01:22:41.742Z"}
+{"level":"info","message":"Login user Api end point hit","service":"identity-service","timestamp":"2025-08-24T01:22:41.747Z"}
+{"level":"info","message":"Request Method: POST, Request URL: /api/auth/login","service":"identity-service","timestamp":"2025-08-24T03:04:46.553Z"}
+{"level":"info","message":"Request Body: [object Object]","service":"identity-service","timestamp":"2025-08-24T03:04:46.583Z"}
+{"level":"info","message":"Login user Api end point hit","service":"identity-service","timestamp":"2025-08-24T03:04:46.608Z"}
+{"level":"warn","message":"Invalid user","service":"identity-service","timestamp":"2025-08-24T03:04:47.261Z"}
+{"level":"info","message":"Request Method: POST, Request URL: /api/auth/login","service":"identity-service","timestamp":"2025-08-24T03:04:51.701Z"}
+{"level":"info","message":"Request Body: [object Object]","service":"identity-service","timestamp":"2025-08-24T03:04:51.702Z"}
+{"level":"info","message":"Login user Api end point hit","service":"identity-service","timestamp":"2025-08-24T03:04:51.706Z"}
+{"level":"warn","message":"Invalid user","service":"identity-service","timestamp":"2025-08-24T03:04:51.786Z"}
+{"level":"info","message":"Request Method: POST, Request URL: /api/auth/login","service":"identity-service","timestamp":"2025-08-24T03:05:08.439Z"}
+{"level":"info","message":"Request Body: [object Object]","service":"identity-service","timestamp":"2025-08-24T03:05:08.439Z"}
+{"level":"info","message":"Login user Api end point hit","service":"identity-service","timestamp":"2025-08-24T03:05:08.440Z"}
+{"level":"info","message":"Request Method: POST, Request URL: /api/auth/login","service":"identity-service","timestamp":"2025-08-24T03:05:20.490Z"}
+{"level":"info","message":"Request Body: [object Object]","service":"identity-service","timestamp":"2025-08-24T03:05:20.490Z"}
+{"level":"info","message":"Login user Api end point hit","service":"identity-service","timestamp":"2025-08-24T03:05:20.494Z"}
