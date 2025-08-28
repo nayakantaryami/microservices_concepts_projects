@@ -1,0 +1,1 @@
+{"level":"error","message":"Proxy error: Cannot read properties of undefined (reading 'startsWith')","service":"api-gateway","timestamp":"2025-08-28T10:50:40.773Z"}
