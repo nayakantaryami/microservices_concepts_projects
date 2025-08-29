@@ -1,6 +1,7 @@
 const Post = require("../models/Post");
 const invalidateCache = require("../utils/invalidateCache");
 const logger = require("../utils/logger");
+const { publishEvent } = require("../utils/rabbitmq");
 const { validateCreatePosts } = require("../utils/validation");
 
 const createPost = async (req, res) => {
@@ -111,30 +112,65 @@ const getPost = async (req, res) => {
   }
 };
 
+// const deletePost = async (req, res) => {
+//   try {
+//     const postId=req.params.id;
+//     const postToDelete=await Post.findById(postId);
+//     if(!postToDelete){
+//       logger.warn("Post not found");
+//       return res.status(404).json({
+//         success:false,
+//         message:"Post not found"
+//       })
+//     }
+
+//     if(req.user._id!==postToDelete.toString(user)){
+//       logger.warn("Unauthorized Access as user is not owner of post");
+//       return res.status(404).json({
+//         success:false,
+//         message:"Unauthorized User trying to access"
+//       })
+//     }
+
+//     await Post.deleteOne({_id:postId});
+//     await invalidateCache(req,postId);
+//     logger.info("Post deleted successfully");
+//     res.json({
+//       success:true,
+//       message:"Post deleted successfully"
+//     })
+//   } catch (err) {
+//     logger.error("Error in deleting Post", err);
+//     res.status(500).json({
+//       success: false,
+//       message: "Error in deleting Posts",
+//     });
+//   }
+// };
+
 const deletePost = async (req, res) => {
   try {
-    const postId=req.params.id;
-    const postToDelete=await Post.findById(postId);
-    if(!postToDelete){
-      logger.warn("Post not found");
+    const post = await Post.findOneAndDelete({
+      _id: req.params.id,
+      user: req.user.userId,
+    });
+
+    if (!post) {
       return res.status(404).json({
-        success:false,
-        message:"Post not found"
-      })
+        message: "Post not found",
+        success: false,
+      });
     }
 
-    if(req.user._id!==postToDelete.toString(user)){
-      logger.warn("Unauthorized Access as user is not owner of post");
-      return res.status(404).json({
-        success:false,
-        message:"Unauthorized User trying to access"
-      })
-    }
+    //publish post delete method ->
+    await publishEvent("post.deleted", {
+      postId: post._id.toString(),
+      userId: req.user.userId,
+      mediaIds: post.mediaIds,
+    });
 
-    await Post.deleteOne({_id:postId});
-    await invalidateCache(req,postId);
-    logger.info("Post deleted successfully");
-    res.json({
+    await invalidateCache(req, req.params.id);
+   res.json({
       success:true,
       message:"Post deleted successfully"
     })
@@ -146,5 +182,6 @@ const deletePost = async (req, res) => {
     });
   }
 };
+
 
 module.exports = { createPost ,getAllPosts,getPost,deletePost};

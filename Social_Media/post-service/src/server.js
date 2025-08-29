@@ -7,7 +7,8 @@ const helmet=require("helmet");
 const postRoutes=require("./routes/post-route");
 const errorHandler=require("./middleware/errorHandler");
 const logger=require("./utils/logger");
-const connectDB=require("./config/connectDB")
+const connectDB=require("./config/connectDB");
+const { connectRabbitmq } = require('./utils/rabbitmq');
 const app=express();
 const PORT=process.env.PORT|| 3002;
 
@@ -35,10 +36,19 @@ app.use('/api/posts',(req,res,next)=>{
 },postRoutes)
 
 app.use(errorHandler);
-app.listen(PORT,()=>{
-    logger.info(`post-server is running on port ${PORT}`)
-});
 
+async function startServer(){
+    try {
+        await connectRabbitmq();
+        app.listen(PORT,()=>{
+            logger.info(`post-server is running on port ${PORT}`)
+        });
+    } catch (err) {
+       logger.error("failed to connect to server",err) 
+       process.exit(1)
+    }
+}
+startServer();
 //unhandled promise rejection  for safety
 
 process.on("unhandledRejection",(reason,promise)=>{
