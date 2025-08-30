@@ -241,3 +241,22 @@
 {"level":"info","message":"Event consumed: post.deleted","service":"media-service","timestamp":"2025-08-29T22:31:28.952Z"}
 {"level":"info","message":"media-server is running on port 3003","service":"media-service","timestamp":"2025-08-29T22:31:28.953Z"}
 {"level":"info","message":"MongoDB connected","service":"media-service","timestamp":"2025-08-29T22:31:30.288Z"}
+{"level":"info","message":"Media service running on port 3003","service":"media-service","timestamp":"2025-08-29T22:31:34.546Z"}
+{"level":"info","message":"Connected to RabbitMq","service":"media-service","timestamp":"2025-08-29T22:31:34.576Z"}
+{"level":"info","message":"Event consumed: post.deleted","service":"media-service","timestamp":"2025-08-29T22:31:34.588Z"}
+{"level":"info","message":"media-server is running on port 3003","service":"media-service","timestamp":"2025-08-29T22:31:34.590Z"}
+{"level":"info","message":"MongoDB connected","service":"media-service","timestamp":"2025-08-29T22:31:36.448Z"}
+{"level":"info","message":"Received POST request to /api/media/upload","service":"media-service","timestamp":"2025-08-29T22:32:18.167Z"}
+{"level":"info","message":"Request body, undefined","service":"media-service","timestamp":"2025-08-29T22:32:18.170Z"}
+{"level":"info","message":"Starting media Upload","service":"media-service","timestamp":"2025-08-29T22:32:18.264Z"}
+{"level":"info","message":"File details: name=bravewallpaper.jpg, type=image/jpeg","service":"media-service","timestamp":"2025-08-29T22:32:18.268Z"}
+{"level":"info","message":" uploading to cloudinary starting","service":"media-service","timestamp":"2025-08-29T22:32:18.270Z"}
+{"level":"info","message":"Cloudinary upload successful. public Id: - ixbvohnntfp97isttokt","service":"media-service","timestamp":"2025-08-29T22:32:25.334Z"}
+{"level":"info","message":"Received GET request to /api/media/get","service":"media-service","timestamp":"2025-08-29T22:34:39.034Z"}
+{"level":"info","message":"Request body, undefined","service":"media-service","timestamp":"2025-08-29T22:34:39.037Z"}
+{"0":"i","1":"x","10":"p","11":"9","12":"7","13":"i","14":"s","15":"t","16":"t","17":"o","18":"k","19":"t","2":"b","3":"v","4":"o","5":"h","6":"n","7":"n","8":"t","9":"f","level":"info","message":"Media deleted successfully from cloudstorage","service":"media-service","timestamp":"2025-08-29T22:34:57.612Z"}
+{"level":"info","message":"Delted Media 68b22a79d1effffb21eb35e2 associated with the delted post 68b22ad1e6eed25cf6b1b3f8","service":"media-service","timestamp":"2025-08-29T22:34:57.731Z"}
+{"level":"info","message":"completed deletion of media for postId : 68b22ad1e6eed25cf6b1b3f8 ","service":"media-service","timestamp":"2025-08-29T22:34:57.731Z"}
+{"level":"info","message":"Received GET request to /api/media/get","service":"media-service","timestamp":"2025-08-29T22:35:17.026Z"}
+{"level":"info","message":"Request body, undefined","service":"media-service","timestamp":"2025-08-29T22:35:17.027Z"}
+{"level":"info","message":"completed deletion of media for postId : 68b23f6716711016ee3bce5b ","service":"media-service","timestamp":"2025-08-30T00:03:22.120Z"}

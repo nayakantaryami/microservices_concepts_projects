@@ -23,6 +23,14 @@ const createPost = async (req, res) => {
       mediaIds: mediaIds || [],
     });
     await newPost.save();
+
+    await publishEvent("post.created",{
+      postId:newPost._id.toString(),
+      userId:newPost.user.toString(),
+      content:newPost.content,
+      createdAt:newPost.createdAt
+    })
+
     //removing the stale data in the cache as we are adding new data to out database
     await invalidateCache(req,newPost._id.toString());
 

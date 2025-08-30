@@ -14,3 +14,16 @@
 {"level":"info","message":"Search post created : 68b23f4816711016ee3bce59, 68b23f4839bd747c4fcbbca8","service":"post-service","timestamp":"2025-08-30T00:01:13.114Z"}
 {"level":"info","message":"Search post created : 68b23f6716711016ee3bce5b, 68b23f6739bd747c4fcbbcaa","service":"post-service","timestamp":"2025-08-30T00:01:43.245Z"}
 {"level":"info","message":"Search Post deleted : 68b23f6716711016ee3bce5b","service":"post-service","timestamp":"2025-08-30T00:03:22.092Z"}
+{"level":"info","message":"Connected to RabbitMq","service":"search-service","timestamp":"2025-08-30T00:04:54.302Z"}
+{"level":"info","message":"Event consumed: post.created","service":"search-service","timestamp":"2025-08-30T00:04:54.349Z"}
+{"level":"info","message":"Event consumed: post.deleted","service":"search-service","timestamp":"2025-08-30T00:04:54.368Z"}
+{"level":"info","message":"Search service is running on port: 3004","service":"search-service","timestamp":"2025-08-30T00:04:54.373Z"}
+{"level":"info","message":"MongoDB connected","service":"search-service","timestamp":"2025-08-30T00:04:55.879Z"}
+{"level":"info","message":"Search post created : 68b2408316711016ee3bce60, 68b24083192e4c839072e551","service":"search-service","timestamp":"2025-08-30T00:06:27.799Z"}
+{"level":"info","message":"Search post created : 68b2409816711016ee3bce62, 68b24099192e4c839072e553","service":"search-service","timestamp":"2025-08-30T00:06:49.132Z"}
+{"level":"info","message":"Received GET request to /api/search/posts?query=search","service":"search-service","timestamp":"2025-08-30T00:09:11.462Z"}
+{"level":"info","message":"Request body, [object Object]","service":"search-service","timestamp":"2025-08-30T00:09:11.466Z"}
+{"level":"info","message":"Search endpoint hit!","service":"search-service","timestamp":"2025-08-30T00:09:11.471Z"}
+{"level":"info","message":"Received GET request to /api/search/posts?query=ram","service":"search-service","timestamp":"2025-08-30T00:09:22.420Z"}
+{"level":"info","message":"Request body, [object Object]","service":"search-service","timestamp":"2025-08-30T00:09:22.422Z"}
+{"level":"info","message":"Search endpoint hit!","service":"search-service","timestamp":"2025-08-30T00:09:22.423Z"}
